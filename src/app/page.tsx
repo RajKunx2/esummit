@@ -4,6 +4,7 @@ import Hero from "./Hero/page"
 import Nav from "../components/header/index"
 import Zoom from "../components/ZoomParallax"
 import About from "./About/page"
+import Stats from "./Stats/page"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Zoom />
       <About />
+      <Stats />
       {/* <Lamp /> */}
     </>
 

@@ -35,12 +35,12 @@ export default function RetroGrid({
 
       {/* Text Component */}
       <div className="absolute inset-0 flex items-center justify-center">
-      <Text
-        text={["WELCOME TO MY SITE", "ENJOY YOUR STAY", "LET'S GET STARTED"]}
-        duration={1000}
-        animateOnLoad={true}
-        className="text-gray-800" // Custom classes can be added here
-      />
+        <Text
+          text={["ESUMMIT 2025", "NORTH INDIA'S BIGGEST ENTERPEUNERSHIP SUMMIT", "JANUARY 2025"]}
+          duration={1000}
+          animateOnLoad={true}
+          className="text-black"
+        />
       </div>
     </div>
   );

@@ -8,6 +8,8 @@ import Video from "./Stats/Video"
 import Stats from "./Stats/page"
 import Why from "./Why/page"
 import Speakers from "./Speakers/page"
+import Footer from "../components/Footer"
+import Events from "./Event/page"
 // import Sponsors from "./Sponsors/Sponsors"
 
 export default function Home() {
@@ -19,8 +21,10 @@ export default function Home() {
       <About />
       <Video />
       <Stats />
-      <Why />\
+      <Why />
+      <Events />
       <Speakers />
+      <Footer />
       {/* <Lamp /> */}
     </>
 

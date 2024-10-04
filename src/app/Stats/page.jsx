@@ -6,17 +6,17 @@ export default function ScrollBasedVelocityDemo() {
 
     <div className="my-12">
       <VelocityScroll
-        text="Footfall 40000+"
+        text="40000+ Footfall"
         default_velocity={5}
         className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
       />
       <VelocityScroll2
-        text="Competitions 10+"
+        text="10+ Competitions"
         default_velocity={5}
         className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
       />
       <VelocityScroll
-        text="Artists and Speakers 25+"
+        text="25+ Artists and Speakers"
         default_velocity={5}
         className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
       />

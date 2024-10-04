@@ -96,7 +96,11 @@ export function VelocityScroll({
             >
                 <motion.div className={cn("inline-block", className)} style={{ x }}>
                     {Array.from({ length: repetitions }).map((_, i) => (
-                        <span key={i} ref={i === 0 ? textRef : null}>
+                        <span
+                            key={i}
+                            ref={i === 0 ? textRef : null}
+                            className="mx-24"  // Add gap between each repeating element
+                        >
                             {children}{" "}
                         </span>
                     ))}

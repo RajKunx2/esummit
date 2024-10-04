@@ -6,6 +6,7 @@ import Zoom from "../components/ZoomParallax"
 import About from "./About/page"
 import Video from "./Stats/Video"
 import Stats from "./Stats/page"
+import Why from "./Why/page"
 // import Sponsors from "./Sponsors/Sponsors"
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <Video />
       <Stats />
+      <Why />
       {/* <Lamp /> */}
     </>
 

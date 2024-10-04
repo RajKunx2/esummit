@@ -4,4 +4,5 @@
 
 #menu{
   background-color: black;
+  overflow-x: auto;
 }

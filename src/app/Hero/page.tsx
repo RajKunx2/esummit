@@ -1,7 +1,31 @@
+"use client"; // Ensure this is a client component
+
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Text from "./Text";
-import Sponsors from "../Sponsors/Sponsors"
-import { SP } from "next/dist/shared/lib/utils";
+import Sponsors from "../Sponsors/Sponsors";
+
+// Custom hook to detect window size
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth, // Initialize with current width
+    height: window.innerHeight, // Initialize with current height
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize); // Cleanup on unmount
+  }, []);
+
+  return windowSize;
+};
 
 export default function RetroGrid({
   className,
@@ -10,12 +34,28 @@ export default function RetroGrid({
   className?: string;
   angle?: number;
 }) {
+  const { width } = useWindowSize(); // Get the window width
+
+  // Set text array based on window size
+  const getTextArray = () => {
+    if (width >= 1200) {
+      // For large screens
+      return ["ESUMMIT 2025", "NORTH INDIA'S BIGGEST ENTREPRENEURSHIP SUMMIT", "JANUARY 2025"];
+    } else if (width >= 768) {
+      // For medium screens
+      return ["ESUMMIT 2025", "NORTH INDIA'S BIGGEST", "ENTREPRENEURSHIP SUMMIT", "JANUARY 2025"];
+    } else {
+      // For small screens
+      return ["ESUMMIT 2025", "NORTH INDIA'S BIGGEST", "ENTREPRENEURSHIP SUMMIT", "JANUARY 2025"];
+    }
+  };
+
   return (
     <>
       <div
         className={cn(
           "pointer-events-none absolute size-full overflow-hidden opacity-50 [perspective:200px]",
-          className,
+          className
         )}
         style={{ "--grid-angle": `${angle}deg` } as React.CSSProperties}
       >
@@ -28,7 +68,7 @@ export default function RetroGrid({
               // Light Styles
               "[background-image:linear-gradient(to_right,rgba(0,0,0,0.3)_1px,transparent_0),linear-gradient(to_bottom,rgba(0,0,0,0.3)_1px,transparent_0)]",
               // Dark styles
-              "dark:[background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_0),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_0)]",
+              "dark:[background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_0),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_0)]"
             )}
           />
         </div>
@@ -39,14 +79,14 @@ export default function RetroGrid({
         {/* Text Component */}
         <div className="absolute inset-0 flex items-center flex-col justify-center">
           <Text
-            text={["ESUMMIT 2025", "NORTH INDIA'S BIGGEST ENTERPEUNERSHIP SUMMIT", "JANUARY 2025"]}
+            text={getTextArray()} // Use the dynamic text array
             duration={1000}
             animateOnLoad={true}
-            className="text-black"
+            className="text-black text-center"
           />
-
         </div>
       </div>
+
       <Sponsors />
     </>
   );

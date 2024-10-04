@@ -9,15 +9,15 @@ export const links = [
     },
     {
         title: "Sponsors",
-        href: "/"
+        href: "/Sponsor"
     },
     {
         title: "Speakers",
-        href: "/"
+        href: "/Speaker"
     },
     {
         title: "Contact",
-        href: "/"
+        href: "/Contact"
     }
 ]
 

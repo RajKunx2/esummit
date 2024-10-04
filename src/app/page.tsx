@@ -6,8 +6,7 @@ import About from "./About/page"
 import Video from "./Stats/Video"
 import Stats from "./Stats/page"
 import Why from "./Why/page"
-import Speakers from "./Speakers/page"
-import Footer from "../components/Footer"
+import Speakers from "./Speakers"
 import Events from "./Event/page"
 // import Sponsors from "./Sponsors/Sponsors"
 
@@ -22,7 +21,6 @@ export default function Home() {
       <Why />
       <Events />
       <Speakers />
-      <Footer />
       {/* <Lamp /> */}
     </>
 

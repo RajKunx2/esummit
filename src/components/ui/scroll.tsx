@@ -99,7 +99,7 @@ export function VelocityScroll({
                         <span
                             key={i}
                             ref={i === 0 ? textRef : null}
-                            className="mx-24"  // Add gap between each repeating element
+                            className="mx-12 md:mx-24"  // Add gap between each repeating element
                         >
                             {children}{" "}
                         </span>

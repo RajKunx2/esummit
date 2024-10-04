@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Lamp from "./lamp/page"
 import Hero from "./Hero/page"
-import Nav from "../components/header/Header"
 import Zoom from "../components/ZoomParallax"
 import About from "./About/page"
 import Video from "./Stats/Video"
@@ -15,7 +14,6 @@ import Events from "./Event/page"
 export default function Home() {
   return (
     <>
-      <Nav />
       <Hero />
       <Zoom />
       <About />

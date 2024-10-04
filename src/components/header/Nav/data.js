@@ -5,7 +5,7 @@ export const links = [
     },
     {
         title: "Itenary",
-        href: "/"
+        href: "/Itenary"
     },
     {
         title: "Sponsors",

@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import styles from "./style.module.scss"
 import { motion } from 'framer-motion';
 import { links, footerLinks } from './data';
 import { perspective, slideIn } from "./anim";

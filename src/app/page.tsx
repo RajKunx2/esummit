@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Lamp from "./lamp/page"
-import Hero from "./Hero/page"
+import Hero from "./Hero"
 import Zoom from "../components/ZoomParallax"
 import About from "./About/page"
 import Video from "./Stats/Video"
